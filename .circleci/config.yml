@@ -12,7 +12,9 @@ jobs:
       - python/install-deps
       - python/save-cache
       - run:
-          command: pytest test_calculator.py
+          command: |
+            . venv/bin/activate
+            pytest test_calculator.py
           name: Test
 
 workflows:
